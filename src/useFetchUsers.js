@@ -1,5 +1,5 @@
 
-import { useReducer, useEffect } from "react"
+import { useReducer} from "react"
 
 const ACTIONS = {
     MAKE_REQUEST: 'make-request',
@@ -25,7 +25,7 @@ return state
 }
 export default function useFetchUsers(params, page) {
     const [state, dispatch] = useReducer(reducer, { users: [], loading: true })
-
+dispatch
     return {
         users: [],
         loading: false,
