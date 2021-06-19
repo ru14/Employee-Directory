@@ -10,7 +10,7 @@ function App() {
     <Container>
       {loading && <h1>Loading...</h1>}
       {error && <h1>Error...</h1>}
-      <h1>{users.length}</h1>
+      {users && <h1>{users.length}</h1>}
     </Container>
   )
 }
