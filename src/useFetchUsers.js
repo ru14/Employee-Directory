@@ -27,17 +27,24 @@ return state
 }
 //Every time change in parmas or anything we have to reload page to repopulate by use of use effect hook.
 export default function useFetchUsers(params, page) {
+    const cancelToken = axios.CancelToken.source()
     const [state, dispatch] = useReducer(reducer, { users: [], loading: true })
+    
 useEffect(() =>{
 dispatch({type: ACTIONS.MAKE_REQUEST})
 axios.get(URL,{
+    cancelToken: cancelToken.token,
     params:{markdown: true, page:page, ...params}
 }).then(res =>{
     console.log(res)
     dispatch({type: ACTIONS.GET_DATA, payload:{users:res.data.results}}) 
 }).catch(e=>{
+    if(axios.isCancel(e)) return
     dispatch({type:ACTIONS.ERROR, payload:{error: e}})
 })
+return() => {
+    cancelToken.cancel()
+}
 },[params,page])
     return state
 }
