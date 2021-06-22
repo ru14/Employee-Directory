@@ -13,8 +13,9 @@ function App() {
     <Container>
       {loading && <h1>Loading...</h1>}
       {error && <h1>Error...</h1>}
-      {users.map(job => {
-        return <User key={user.id} user={user}/>
+      {users.map(user => {
+        console.log(user)
+         return <User key={user.id} user={user}/>
       })}
     </Container>
   )

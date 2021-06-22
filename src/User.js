@@ -3,7 +3,7 @@ import React from 'react'
 export default function User({user}){
     return(
         <div>
-{user.title}
+<p>{user.name.first} {user.name.last}</p>
         </div>
     )
 }
