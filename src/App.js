@@ -11,7 +11,7 @@ function App() {
   const {users, loading, error} = useFetchUsers(params, page)
   return(
     <Container className="mt-4">
-      <h1 className="mb-4 text-center">Employee Directory</h1>
+      <h1 className="mb-4 p-3 text-center bg-info text-white">Employee Directory</h1>
       {loading && <h1>Loading...</h1>}
       {error && <h1>Error...</h1>}
       {users.map(user => {
