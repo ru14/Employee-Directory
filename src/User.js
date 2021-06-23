@@ -6,7 +6,7 @@ export default function User({ user }) {
         // <div>
         //     <p>user.name.first</p>
         // </div>
-        <Card>
+        <Card className="mb-3">
             <Card.Body>
                 <div>
                     <Card.Title>
@@ -20,7 +20,7 @@ export default function User({ user }) {
                     Email: {user.email} 
                 </div>
                 <div>
-                    Employee D.O.B: {user.dob.date} {user.dob.date}
+                    Location: {user.location.city}, {user.location.country} 
                 </div>
                 <div>
                     <img alt={user.name}src={user.picture.medium}/>
