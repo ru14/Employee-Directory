@@ -27,6 +27,7 @@ function reducer(state, action) {
 }
 //Every time change in parmas or anything we have to reload page to repopulate by use of use effect hook.
 export default function useFetchUsers(params, page) {
+    console.log("Fetch users called.")
 
     const [state, dispatch] = useReducer(reducer, { users: [], loading: true })
 
