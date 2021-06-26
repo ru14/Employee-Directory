@@ -37,7 +37,8 @@ npm install
 
 * Clone/fork repo and install the necessary dependencies. Run the server with `npm start` and view application in your browser at `http://localhost:3000`.
 
-* View deployed app on [GitHub Pages]().
+* View deployed app on [GitHub Pages](https://ru14.github.io/Employee-Directory/?).
+* [GitHub Repository](https://github.com/ru14/Employee-Directory)
 
 ## License
 
@@ -47,6 +48,3 @@ This project is licensed under the MIT license.
 
 I am the sole contributor.
 
-## Questions
-
-If you have any questions about the repo, open an issue or contact me directly at 
