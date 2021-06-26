@@ -23,7 +23,7 @@ For this assignment, I had to create an employee directory with React. This assi
 * [Questions](#questions)
 
 ## Preview
-![GIF](./assets/images/employee_dir_demo.gif)
+![GIF](./assets/employee_dir_demo.gif)
 
 ## Installation
 
